@@ -11,9 +11,9 @@ for f in "${files[@]}"; do
 	fi
 
 	build_dir=$(dirname "$f")
-	base="${build_dir%%\/*}"
-	suite="${build_dir##$base}"
-	suite="${suite##\/}"
+	base="origami"
+	suite="$(echo build_dir | sed -e 's/\//-/g')"
+
 
 	if [[ -z "$suite" ]]; then
 		suite=latest
