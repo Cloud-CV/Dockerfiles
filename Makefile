@@ -2,4 +2,8 @@
 test:
 	@./scripts/test.sh
 
-.PHONY: test
+# Test all the Dockerfiles in the repository.
+testall:
+	@./scripts/test-all.sh
+
+.PHONY: test testall
